@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator_Sample", "Iterator_Pattern\Iterator_Sample.csproj", "{375905B7-3B0A-4015-A10E-B5CF3EFAE505}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator_MyCode", "Iterator_MyCode\Iterator_MyCode.csproj", "{1983D7DC-32C1-4094-BF81-A7F6D5F471F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{375905B7-3B0A-4015-A10E-B5CF3EFAE505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{375905B7-3B0A-4015-A10E-B5CF3EFAE505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{375905B7-3B0A-4015-A10E-B5CF3EFAE505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{375905B7-3B0A-4015-A10E-B5CF3EFAE505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1983D7DC-32C1-4094-BF81-A7F6D5F471F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1983D7DC-32C1-4094-BF81-A7F6D5F471F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1983D7DC-32C1-4094-BF81-A7F6D5F471F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1983D7DC-32C1-4094-BF81-A7F6D5F471F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAAE77D5-0A6C-46FA-88C9-91DC8A1DAE50}
+	EndGlobalSection
+EndGlobal
