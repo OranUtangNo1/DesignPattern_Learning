@@ -16,9 +16,10 @@ namespace Iterator_MyCode
 
         Student GetStudent(int index);
 
+        int Last { get; }
     }
 
-    public class Class : IEnumerable<Student>, IClass
+    public class Class : IClass
     {
         IList<Student> students = new List<Student>();
 
@@ -45,9 +46,5 @@ namespace Iterator_MyCode
             return new ClassIteretor(this);
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-           return this.GetEnumerator();
-        }
     }
 }
