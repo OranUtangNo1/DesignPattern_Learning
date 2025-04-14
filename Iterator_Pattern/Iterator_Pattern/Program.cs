@@ -85,8 +85,7 @@ class Program
             this.Index = 0;
         }
 
-        // 内部構造にアクセス
-        // 
+        // 内部構造にアクセス 
         public bool HasNext()
         {
             if (Index < BookShelf.GetLength())
