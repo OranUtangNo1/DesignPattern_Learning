@@ -25,7 +25,6 @@ namespace Iterator_MyCode_ver2
                 Console.WriteLine($"専攻 : {student.Major}");
                 Console.WriteLine($"学籍番号 : {student.StudentNumber}");
                 Console.WriteLine($"===================================");
-
             }
             Console.WriteLine($"");
 

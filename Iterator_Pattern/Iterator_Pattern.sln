@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator_Sample", "Iterator
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator_MyCode", "Iterator_MyCode\Iterator_MyCode.csproj", "{1983D7DC-32C1-4094-BF81-A7F6D5F471F9}"
 EndProject
+
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator_MyCode_ver2", "Iterator_MyCode_ver2\Iterator_MyCode_ver2.csproj", "{69441867-AE10-4AD9-B0E8-2002CF4C6E6E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{DE4F5B07-8A7B-46EB-8CB5-DA53A0717E1D}"
+
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,11 +35,3 @@ Global
 		{DE4F5B07-8A7B-46EB-8CB5-DA53A0717E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE4F5B07-8A7B-46EB-8CB5-DA53A0717E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE4F5B07-8A7B-46EB-8CB5-DA53A0717E1D}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FAAE77D5-0A6C-46FA-88C9-91DC8A1DAE50}
-	EndGlobalSection
-EndGlobal
