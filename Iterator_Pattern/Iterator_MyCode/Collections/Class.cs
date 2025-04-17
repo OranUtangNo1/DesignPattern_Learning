@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Iterator_MyCode.Models;
+using Data;
+using Iterator;
 
 namespace Iterator_MyCode
 {
@@ -43,7 +44,7 @@ namespace Iterator_MyCode
 
         public IEnumerator<Student> GetEnumerator()
         {
-            return new ClassIteretor(this);
+            //return new ClassIteretor(this);
         }
 
     }
