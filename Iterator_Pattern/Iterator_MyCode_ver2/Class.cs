@@ -1,24 +1,30 @@
-﻿using System;
+﻿using Data;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Iterator_MyCode_ver2
 {
+    //IEnumerable<Student>を継承→Classオブジェクトに対してforeachやLINQが利用可能
     internal class Class : IEnumerable<Student>
     {
         private List<Student> students = new List<Student>();
 
+        public void ApppnedStudent(Student student)
+        {
+            this.students.Add(student);
+        }
+
         public IEnumerator<Student> GetEnumerator()
         {
-            throw new NotImplementedException();
+            foreach(var _student in students)
+            {
+                // yield returnすることで studentsの全ての要素をEnumeratorとして返す
+                yield return _student;
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 }

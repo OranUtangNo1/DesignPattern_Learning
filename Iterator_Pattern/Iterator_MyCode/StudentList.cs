@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Iterator_MyCode
+namespace Iterator
 {
     public static class StudentList
     {

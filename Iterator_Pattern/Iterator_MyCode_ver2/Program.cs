@@ -1,28 +1,45 @@
-﻿using Iterator_MyCode;
-using Iterator_MyCode.Models;
-using System.Runtime.CompilerServices;
-using System.Security.Claims;
+﻿using Data;
+using System.Linq;
 
-class Program
+namespace Iterator_MyCode_ver2
 {
-    static void Main(string[] args)
+    class Program
     {
-
-        //** Iteratorパターンを用いた実装 ********************************//
-
-        Class class_A = new Class();
-        StudentList.Students.ForEach(student => class_A.ApppnedStudent(student));
-
-        // ソート状態が欲しい
-        //IEnumerator<Student> classIterator = new ClassIteretor(class_A);
-        // ↓ クライアントコードはイテレータを付け替えるだけでOK
-
-        Console.WriteLine($"== Iterator pattern -==============");
-
-        while (true)
+        static void Main(string[] args)
         {
-            Student student = OrderClassIteretor.Current;
-            if (student != null)
+
+            //** Iteratorパターンを用いた実装 ********************************//
+
+            // 生徒データの作成
+            Class class_A = new Class();
+            StudentList.Students.ForEach(student => class_A.ApppnedStudent(student));
+
+            Console.WriteLine($"== Iterator pattern -==============");
+
+            // クラス側にカスタムソートした、IEnumrableを返すメソッドを実装しておけば、クライアントコードの変更量が少なくなる
+            var sortedStudentList = class_A.Where<Student>(student => student.Gender == Gender.Male).ToList();
+            foreach (var student in sortedStudentList) 
+            {
+                Console.WriteLine($"名前 : {student.Name}");
+                Console.WriteLine($"性別 : {student.Gender}");
+                Console.WriteLine($"専攻 : {student.Major}");
+                Console.WriteLine($"学籍番号 : {student.StudentNumber}");
+                Console.WriteLine($"===================================");
+
+            }
+            Console.WriteLine($"");
+
+
+            //****************************************************************//
+
+
+            //** 通常の実装 ************************************************//
+
+            Console.WriteLine($"== Not Iterator pattern ==============");
+            IList<Student> studentList = new List<Student>();
+            StudentList.Students.ForEach(student => studentList.Add(student));
+
+            foreach (var student in studentList)
             {
                 Console.WriteLine($"名前 : {student.Name}");
                 Console.WriteLine($"性別 : {student.Gender}");
@@ -30,32 +47,9 @@ class Program
                 Console.WriteLine($"学籍番号 : {student.StudentNumber}");
                 Console.WriteLine($"===================================");
             }
-            else
-            {
-                break;
-            }
+
+            //****************************************************************//
+
         }
-        Console.WriteLine($"");
-
-        //****************************************************************//
-
-
-        //** 通常の実装 ************************************************//
-
-        Console.WriteLine($"== Not Iterator pattern ==============");
-        IList<Student> studentList = new List<Student>();
-        StudentList.Students.ForEach(student => studentList.Add(student));
-
-        foreach (var student in studentList)
-        {
-            Console.WriteLine($"名前 : {student.Name}");
-            Console.WriteLine($"性別 : {student.Gender}");
-            Console.WriteLine($"専攻 : {student.Major}");
-            Console.WriteLine($"学籍番号 : {student.StudentNumber}");
-            Console.WriteLine($"===================================");
-        }
-
-        //****************************************************************//
-
     }
 }
